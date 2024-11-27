@@ -89,7 +89,7 @@ export default function Header() {
           </li>
           <li>
             <a href="#" className="text-gray-700 hover:text-blue-500">
-              Cuidados com o Corpo
+            Cuidados faciais e corporais
             </a>
           </li>
           <li>
