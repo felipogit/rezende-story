@@ -7,7 +7,7 @@ import { Navigation } from "swiper/modules";
 
 export const Banner = () => {
   return (
-    <div className="w-full h-[288px] overflow-hidden">
+    <div className="w-full h-auto overflow-hidden">
       <Swiper
         navigation
         modules={[Navigation]}
@@ -21,7 +21,7 @@ export const Banner = () => {
         <SwiperSlide>
           <div className="h-full w-full">
             <img
-              src="/banner01.jpeg"
+              src="/banner01.jpg"
               alt="Banner 1"
               className="h-full w-full object-fill"
             />
@@ -31,7 +31,7 @@ export const Banner = () => {
         <SwiperSlide>
           <div className="h-full w-full">
             <img
-              src="/banner02.jpeg"
+              src="/banner02.jpg"
               alt="Banner 2"
               className="h-full w-full object-fill"
             />

@@ -19,21 +19,13 @@ export const categories: Category[] = [
     name: "Clareadores", // Categoria
     products: [
       {
-        id: 1,
-        name: "Loção bumbum de pêssego",
-        price: 25.00,
-        description: `Loção bumbum de pêssego , clareia manchas de foliculite, hidrata. A loção pode ser aplicada 
-          em diversas partes do corpo, mas é especialmente indicada para regiões como bumbum, coxas.`,
-        imageUrl: "/clareador (8).jpeg",
-      },
-      {
         id: 2,
         name: "Clareador extra forte",
         price: 30.00,
         description: `O clareador extra forte uso noturno é um produto cosmético utilizado para tratar manchas 
         na pele, como melasma, manchas solares, hiperpigmentação ou acne. Ele contém ativos clareadores, como hidroquinona, ácido kójico ou vitamina C, que ajudam a reduzir a produção de melanina, a substância responsável pela coloração da pele.
         Indicado usar protetor solar durante o dia.`,
-        imageUrl: "/clareador (9).jpeg",
+        imageUrl: "/Clareadores/clareador-extra-fortes.jpeg",
       },
       {
         id: 3,
@@ -48,7 +40,7 @@ export const categories: Category[] = [
         Espátula 
         Luva 
         Touca`,
-        imageUrl: "/clareador (6).jpeg",
+        imageUrl: "/Clareadores/Clareador-de-manchas.jpeg",
       },
       {
         id: 4,
@@ -57,14 +49,14 @@ export const categories: Category[] = [
         description: `A máscara de argila branca serve como revitalização e clareamento: A argila branca pode ajudar a melhorar a luminosidade e o tom da pele,
          proporcionando um aspecto mais saudável e radiante. Ela é frequentemente utilizada em máscaras faciais para dar uma aparência mais uniforme à pele.
         Controle da oleosidade`,
-        imageUrl: "/clareador (5).jpeg",
+        imageUrl: "/Clareadores/argila-branca.jpeg",
       },
       {
         id: 5,
         name: "Gomagem clareadora",
         price: 30.00,
         description: `A gomagem clareadora é uso facial e corporal,ela ajuda uniformizar o tom da pele e a reduzir manchas causadas pelo sol, acne, ou melasma.`,
-        imageUrl: "/clareador (4).jpeg",
+        imageUrl: "/Clareadores/gomagem.jpeg",
       },
       {
         id: 6,
@@ -75,21 +67,21 @@ export const categories: Category[] = [
         Redução de cicatrizes 
         Hidratação da pele 
         Prevenção e tratamento das estrias.`,
-        imageUrl: "/clareador (7).jpeg",
+        imageUrl: "/Clareadores/pomada-rosa-mosqueta.jpeg",
       },
       {
         id: 7,
         name: "Pomada de açafrão",
         price: 20.00,
         description: `Pomada de açafrão indicada para tratamento de inflamações e irritações na pele, é cicatrizante de feridas e manchas, reduz manchas e hipergmentação.`,
-        imageUrl: "/clareador (2).jpeg",
+        imageUrl: "/Clareadores/pomada-acafrao.jpeg",
       },
       {
         id: 8,
         name: "Dolomita",
         price: 25.00,
         description: `A dolomita possui propriedades alcalinizantes, anti-inflamatórias, antissépticas, calmantes, clareadoras, cicatrizantes e tonificantes. Indicada para rosto e corpo.`,
-        imageUrl: "/clareador01 (2).jpeg",
+        imageUrl: "/Clareadores/dolomita.jpeg",
       },
       {
         id: 9,
@@ -97,7 +89,7 @@ export const categories: Category[] = [
         price: 20.00,
         description: `Tira manchas & secas espinhas é um creme capaz de eliminar espinhas e diminuir manchas da pele causadas por exposição excessiva ao sol. Modo se usar:
         Aplicar o tira manchas & seca espinhas no local desejado, massageie por alguns instantes até sua completa absorção. Recomendamos uso noturno, sempre antes de dormir.`,
-        imageUrl: "/clareador (3).jpeg",
+        imageUrl: "/Clareadores/tira-manchas.jpeg",
       },
       {
         id: 10,
@@ -105,7 +97,7 @@ export const categories: Category[] = [
         price: 30.00,
         description: `O clareador íntimo extra forte é utilizado para clarear a pele em áreas íntimas, como 
         a virilha, axilas. Ele contém substâncias que ajudam a reduzir a hiperpigmentação, suavizando a tonalidade da pele e clareando.`,
-        imageUrl: "/clareador01 (1).jpeg",
+        imageUrl:"/Clareadores/clareador-extra-forte-intimo.jpeg",
       },
     ],
 
@@ -120,35 +112,35 @@ export const categories: Category[] = [
         name: "Tônico anti queda",
         price: 20.00,
         description: `Para cabelos quebradiços, finos e fracos.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Linha-capilar/tonica-ante-queda.jpeg",
       },
       {
         id: 12,
         name: "Óleo reparador de rosa mosqueta",
         price: 20.00,
         description: `Hidratação intensa, brilho intenso, anti frizz.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Linha-capilar/olho-reparador-rosa-mosqueta.jpeg",
       },
       {
         id: 13,
         name: "Óleo de argan reparador de pontas.",
         price: 20.00,
         description: `Anti frizz, hidrata, nutre, para todos os tipos de cabelos.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Linha-capilar/oleo-reparador-argan.jpeg",
       },
       {
         id: 14,
         name: "Perfume capilar",
         price: 20.00,
         description: ``,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Linha-capilar/perfume-capilar.jpeg",
       },
       {
         id: 15,
         name: "Spray de reconstrução dos fios",
         price: 30.00,
         description: ``,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Linha-capilar/spray-reconstrucao.jpeg",
       },
       {
         id: 16,
@@ -156,7 +148,7 @@ export const categories: Category[] = [
         price: 25.00,
         description: `O Spray Selante 10 Benefícios Liso com Força é um finalizador 
           capaz de melhorar a penteabilidade dos fios e auxiliar no processo de escovação, deixando os cabelos alinhados por mais tempo.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Linha-capilar/protetor-termico.jpeg",
       },
       {
         id: 17,
@@ -166,14 +158,14 @@ export const categories: Category[] = [
         1 shampoo 500ml
         1 máscara de hidratação 500ml
         1 condicionador 500ml`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Linha-capilar/kit-shampoo-antiqueda.jpeg",
       },
       {
         id: 18,
         name: "Tônico Rapunzel 470ml ",
         price: 25.00,
         description: `Acelera o crescimento dos fios, fortalece, reduz a queda e quebra`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Linha-capilar/tonico-rampunzel.jpeg",
       },
       {
         id: 19,
@@ -184,28 +176,28 @@ export const categories: Category[] = [
         1 máscara de hidratação 500ml
         1 condicionador 500ml
         1 óleo de ervas`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Linha-capilar/kit-shampoo-rapunzel.jpeg",
       },
       {
         id: 20,
         name: "Vitamina para cabelo",
         price: 45.00,
         description: ``,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Linha-capilar/vitamina-capilar.jpeg",
       },
       {
         id: 21,
         name: "Kit bababell morango",
         price: 50.00,
         description: `  `,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Linha-capilar/kit-shampoo-bababeu-morango.jpeg",
       },
       {
         id: 22,
         name: "Kit bababell tuti fruti",
         price: 50.00,
         description: `  `,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Linha-capilar/kit-babel-tutifrut.jpeg",
       },
       {
         id: 23,
@@ -216,7 +208,7 @@ export const categories: Category[] = [
         1 shampoo 300ml 
         1 máscara de hidratação 300ml
         1 condicionador 300ml`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Linha-capilar/kit-babalu-banana.jpeg",
       },
       {
         id: 24,
@@ -226,7 +218,7 @@ export const categories: Category[] = [
         1 shampoo 300ml 
         1 máscara de hidratação 300ml
         1 condicionador 300ml`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Linha-capilar/kit-babalu-uva.jpeg",
       },
       {
         id: 25,
@@ -237,7 +229,7 @@ export const categories: Category[] = [
         1 shampoo 300ml 
         1 máscara de hidratação 300ml
         1 condicionador 300ml`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Linha-capilar/kit-babalu-tutifrut.jpeg",
       },
       {
         id: 26,
@@ -248,7 +240,7 @@ export const categories: Category[] = [
         1 shampoo 300ml 
         1 máscara de hidratação 300ml
         1 condicionador 300ml`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Linha-capilar/kit-babalu-maça-verde.jpeg",
       },
       {
         id: 27,
@@ -259,7 +251,7 @@ export const categories: Category[] = [
         finalizador 60ml
         valor promocional 30$
         O minoxidil é um medicamento tópico utilizado para o tratamento da queda de cabelo, estimulando o crescimento de novos fios.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Linha-capilar/kit-minoxidil.jpeg",
       },
       {
         id: 28,
@@ -270,7 +262,7 @@ export const categories: Category[] = [
         1 shampoo 300ml 
         1 máscara de hidratação 300ml
         1 condicionador 300ml`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Linha-capilar/ativador-cachos.jpeg",
       },
       {
         id: 29,
@@ -281,7 +273,7 @@ export const categories: Category[] = [
         1 shampoo 300ml 
         1 máscara de hidratação 300ml
         1 condicionador 300ml`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Linha-capilar/kit-fini-beijinho.jpeg",
       },
       {
         id: 30,
@@ -292,7 +284,7 @@ export const categories: Category[] = [
         1 shampoo 300ml 
         1 máscara de hidratação 300ml
         1 condicionador 300ml`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Linha-capilar/kit-babalu-melancia.jpeg",
       },
       {
         id: 31,
@@ -302,7 +294,7 @@ export const categories: Category[] = [
         1 shampoo 300ml 
         1 máscara de hidratação 300ml
         1 condicionador 300ml`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Linha-capilar/kit-babalu-morango.jpeg",
       },
 
     ]
@@ -317,24 +309,24 @@ export const categories: Category[] = [
         price: 15.00,
         description: `A touca de cetim, com sua textura suave e lisa, reduz esse atrito, preservando a integridade dos fios. Além disso,
          a touca de cetim também ajuda a manter a hidratação dos cabelos`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Acessorios/toca-cetin.jpeg",
       },
       {
         id: 33,
         name: "Xuxa de cetim",
         price: 5.00,
         description: ``,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Acessorios/xuxa-cetin.jpeg",
       },
       {
         id: 34,
-        name: "Escova tira nós",
+        name: "Escova polvo",
         price: 10.00,
         description: `tira os nós, ela também é ótima pra finalizar os cachos e fazer fitagem, que é um jeito de pentear o 
         cabelo separando as mechas molhadas como se fossem fitinhas. Mesmo assim, quem tem cabelos ondulados ou até mesmo lisos também pode usar 
         a escova polvo. Ela é ótima pra qualquer tipo de fio!
         `,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Acessorios/escova-pouvo.jpeg",
       },
       {
         id: 35,
@@ -342,7 +334,7 @@ export const categories: Category[] = [
         price: 10.00,
         description: `A Escova Magica é perfeita para desembaraçar todos os tipos de cabelo sem esforços.
          As cerdas das escovas são delicadas para que não danifique o couro cabeludo.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Acessorios/escova-magica.jpeg",
       },
       {
         id: 36,
@@ -350,14 +342,14 @@ export const categories: Category[] = [
         price: 10.00,
         description: `Remove delicadamente as células mortas, resíduos de produtos e sujeira.
          Indicado para todos os tipos de cabelo, Pode ser usado nos cabelos secos ou molhados, auxiliando na aplicação de produtos óleos e afins.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Acessorios/massageador-capilar.jpeg",
       },
       {
         id: 37,
         name: "Escova raqueta",
         price: 12.00,
         description: `Ideal para desembaraçar os fios. Reduz a quebra dos fios e possui passagem de ar que auxilia na secagem.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Acessorios/escova-raquete.jpeg",
       },
 
     ]
@@ -368,17 +360,17 @@ export const categories: Category[] = [
     products: [
       {
         id: 38,
-        name: "Body Splash 130ml ",
+        name: "Body Splash babaloo",
         price: 20.00,
-        description: `Tutti frutti e morango `,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        description: `Body Splash 130ml, Tutti frutti e morango `,
+        imageUrl: "/Perfumes-fragrancias/body-spresh-babalo.jpeg",
       },
       {
         id: 39,
         name: "Body splash árabe ",
         price: 30.00,
         description: ``,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Perfumes-fragrancias/body-spresh-arabe.jpeg",
       },
       {
         id: 40,
@@ -386,118 +378,118 @@ export const categories: Category[] = [
         price: 70.00,
         description: `Perfume miniatura fantasy 30ml  Dreeam
         (INPIR. Fantasy de Britney Spreace) `,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Perfumes-fragrancias/miniatura-fantasy.jpeg",
       },
       {
         id: 41,
         name: "Kit glow red (Body splash+hidratante) ",
         price: 45.00,
         description: ``,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Perfumes-fragrancias/kir-glow-red.jpeg",
       },
       {
         id: 42,
         name: "Perfume miniatura 50ml Invictus",
         price: 80.00,
         description: ``,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Perfumes-fragrancias/miniatura-invictos.jpeg",
       },
       {
         id: 43,
         name: "Perfume miniatura Ferrari",
         price: 70.00,
         description: `Perfume miniatura de 30ml`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Perfumes-fragrancias/miniatura-ferrari.jpeg",
       },
       {
         id: 44,
-        name: "Kit Plié 60ml",
+        name: "Kit pokaloka Plié ",
         price: 55.00,
         description: `01 hidratante perfumado Plié 60ml 
         01 Body Splash Plié 60ml
         Família Olfativa: Oriental Floral`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Perfumes-fragrancias/kit-bory-spresh-hidratante-dile.jpeg",
       },
       {
         id: 45,
-        name: "Kit Amora 60ml",
+        name: "Kit pokaloka Amora ",
         price: 55.00,
         description: `Contém 01 hidratante perfumado Amora 60ml e 01 Body Splash Amora 60ml;
         Família Olfativa: Frutal`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Perfumes-fragrancias/kit-bory-spresh-hidratante-amora.jpeg",
       },
       {
         id: 46,
-        name: "Kit Coconut 60ml",
+        name: "Kit pokaloka Coconut",
         price: 55.00,
         description: `Contém 01 hidratante perfumado Coconut 60ml e 01 Body Splash Coconut 60ml;
         Família Olfativa: Frutal Doce`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Perfumes-fragrancias/kit-bory-spresh-hidratante-coconut.jpeg",
       },
       {
         id: 47,
-        name: "Kit Vanilla ",
+        name: "Kit pokaloka Vanilla ",
         price: 55.00,
         description: `Pokoloka- Body Splash 60ML + Hidratante Corporal 60ML Body Splash Vanilla - Pokoloka.
         Deixa a pele suavemente perfumada ao longo do dia. Fragrância VANILLA : Floral Baunilha`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Perfumes-fragrancias/kit-bory-spresh-hidratante-vanila.jpeg",
       },
       {
         id: 48,
-        name: "PERFUME CAROLINA HERRERA GOOD GIRL ",
+        name: "Perfume Carolina Herrera Godd Girl",
         price: 80.00,
         description: `FEMININO EAU DE PARFUM 40ml `,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Perfumes-fragrancias/perfume-carolina.jpeg",
       },
       {
         id: 49,
         name: "Body splash fini dentinho 250ml",
         price: 15.00,
         description: ``,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Perfumes-fragrancias/body-spresh-fine-dentinho.jpeg",
       },
       {
         id: 50,
-        name: "Body splash fini tubes 250ml",
+        name: "Body splash fini bubes",
         price: 15.00,
         description: ``,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Perfumes-fragrancias/body-spresh-fine-bubes.jpeg",
       },
       {
         id: 51,
-        name: "Body splash fini beijinho 250ml",
+        name: "Body splash fini beijinho ",
         price: 15.00,
         description: ``,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Perfumes-fragrancias/body-spresh-fine-beijinho.jpeg",
       },
       {
         id: 52,
-        name: "Hidratante corporal babbaloo tutti fruti 200g ",
+        name: "Hidratante corporal babbaloo tutti fruti ",
         price: 15.00,
         description: ` `,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Perfumes-fragrancias/hidratante-corporal-babalo-tuti-frut.jpeg",
       },
       {
         id: 53,
         name: "Hidratante corporal babbaloo uva 200g ",
         price: 15.00,
         description: ``,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Perfumes-fragrancias/hidratante-coporal-babalo-uva.jpeg",
       },
       {
         id: 54,
         name: "Hidratante corporal babbaloo morango ",
         price: 15.00,
         description: ``,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Perfumes-fragrancias/hidratante-corporal-babalo-morango.jpeg",
       },
       {
         id: 55,
-        name: "Hidratante Fragrância Árabe ",
+        name: "Hidratante eclipse dourado Árabe",
         price: 25.00,
         description: `Hidratante Fragrância Árabe Eclipse Dourado, é uma combinação luxuosa de
          ingredientes naturais que proporciona hidratação e maciez à pele. Com uma fragrância envolvente, deixa a pele suave e sedosa.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Perfumes-fragrancias/hidratante-corporal-arabe.jpeg",
       },
       {
         id: 56,
@@ -506,7 +498,7 @@ export const categories: Category[] = [
         description: `Loção Hidratante  Eclipse da
          marca Miss Rose é uma fragrância refrescante que combina notas florais e frutadas, proporcionando uma sensação de leveza e bem-estar. 
          Ideal para o dia a dia, seu aroma é sútil `,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        imageUrl: "/Perfumes-fragrancias/hidratante-arabe-miss-rose.jpeg",
       },
 
     ]
@@ -517,123 +509,241 @@ export const categories: Category[] = [
     products: [
       {
         id: 57,
-        name: "",
-        price: 35.00,
-        description: `Um hidratante de amêndoas que nutre profundamente a pele, deixando-a macia e com um brilho saudável. Ideal para peles secas e sensíveis.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        name: "Esfoliante clareador babbaloo tutti frutti",
+        price: 25.00,
+        description: `Esfoliante clareador babbaloo tutti frutti (facial e corporal)500g`,
+        imageUrl: "/faciais-corporais/esfoliante-clareador-babalo-tut-frut.jpeg",
       },
       {
         id: 58,
-        name: "Hidratante corporal de amêndoas",
-        price: 35.00,
-        description: `Um hidratante de amêndoas que nutre profundamente a pele, deixando-a macia e com um brilho saudável. Ideal para peles secas e sensíveis.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        name: "Esfoliante clareador babbaloo uva",
+        price: 25.00,
+        description: `Esfoliante clareador babbaloo uva(facial e corporal) 500g `,
+        imageUrl: "/faciais-corporais/esfoliante-clareador-babalo-uva.jpeg",
       },
       {
         id: 59,
-        name: "Hidratante corporal de amêndoas",
-        price: 35.00,
-        description: `Um hidratante de amêndoas que nutre profundamente a pele, deixando-a macia e com um brilho saudável. Ideal para peles secas e sensíveis.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        name: "Esfoliante clareador babbaloo morango",
+        price: 25.00,
+        description: `Esfoliante clareador babbaloo morango (facial e corporal) 500g`,
+        imageUrl: "/faciais-corporais/esfoliante-clareador-morango.jpeg",
       },
       {
         id: 60,
-        name: "Hidratante corporal de amêndoas",
-        price: 35.00,
-        description: `Um hidratante de amêndoas que nutre profundamente a pele, deixando-a macia e com um brilho saudável. Ideal para peles secas e sensíveis.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        name: "Esfoliante clareador babbaloo melancia ",
+        price: 25.00,
+        description: `Esfoliante clareador babbaloo melancia (facial e corporal) 500g`,
+        imageUrl: "/faciais-corporais/esfoliante-clareador-melancia.jpeg",
       },
       {
         id: 61,
-        name: "Hidratante corporal de amêndoas",
-        price: 35.00,
-        description: `Um hidratante de amêndoas que nutre profundamente a pele, deixando-a macia e com um brilho saudável. Ideal para peles secas e sensíveis.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        name: "Esfoliante clareador pó de arroz ",
+        price: 25.00,
+        description: `Esfoliante clareador pó de arroz 
+        (Facial e corporal) auxiliar na remoção das células mortas, renovando a pele e amenizando manchas superficiais. Indicado para todos os tipos de pele.`,
+        imageUrl: "/faciais-corporais/esfoliante-clareador-pó-arroz.jpeg",
       },
       {
         id: 62,
-        name: "Hidratante corporal de amêndoas",
-        price: 35.00,
-        description: `Um hidratante de amêndoas que nutre profundamente a pele, deixando-a macia e com um brilho saudável. Ideal para peles secas e sensíveis.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        name: "Esfoliante clareador de rosa mosqueta",
+        price: 25.00,
+        description: `Esfoliante clareador de rosa mosqueta (facial e corporal) oferece uma renovação celular eficaz, estimula o colágeno e desobstrui poros
+        , clareia manchas, previne acnes e foliculites. Sua fórmula, combinada ao uso do sabonete e hidratante, promove uma abordagem completa para a saúde e vitalidade da pele.`,
+        imageUrl: "/faciais-corporais/esfoliante-clareador-rosa-mosqueta.jpeg",
       },
       {
         id: 63,
-        name: "Hidratante corporal de amêndoas",
-        price: 35.00,
-        description: `Um hidratante de amêndoas que nutre profundamente a pele, deixando-a macia e com um brilho saudável. Ideal para peles secas e sensíveis.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        name: "Esfoliante clareador de açafrão",
+        price: 25.00,
+        description: `Esfoliante clareador de açafrão (facial e corporal) 
+        Esfoliação suave: O esfoliante de açafrão ajuda a remover as células mortas da camada superficial da pele, 
+        promovendo uma esfoliação suave. Isso pode melhorar a textura da pele, deixando-a mais macia, suave e renovada.
+         Clareamento da pele: O açafrão é conhecido por suas propriedades clareadoras naturais`,
+        imageUrl: "/faciais-corporais/esfoliante-clareador-acafrao.jpeg",
       },
       {
         id: 64,
-        name: "Hidratante corporal de amêndoas",
-        price: 35.00,
-        description: `Um hidratante de amêndoas que nutre profundamente a pele, deixando-a macia e com um brilho saudável. Ideal para peles secas e sensíveis.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        name: "Kit banho de lua antialérgico babbaloo uva",
+        price: 30.00,
+        description: `Kit banho de lua antialérgico babbaloo uva (pelos dourados,pele limpa e hidratada, não arde, não pinica)
+        Esfoliante clareador 
+        Água oxigenada 
+        Pó descolorante 
+        Óleo protetor 
+        Sabonete líquido 
+        Hidratante 
+        Espátula 
+        Luva 
+        Touca`,
+        imageUrl: "/faciais-corporais/kit-banho-de-lua-babalo-uva.jpeg",
+      },
+      {
+        id: 65,
+        name: "Kit banho de lua antialérgico babbaloo",
+        price: 30.00,
+        description: `Kit banho de lua antialérgico babbaloo ( pelos dourados,pele limpa e hidratada, não arde, não pinica)
+        Esfoliante clareador 
+        Água oxigenada 
+        Pó descolorante 
+        Óleo protetor 
+        Sabonete líquido 
+        Hidratante 
+        Espátula 
+        Luva 
+        Touca`,
+        imageUrl: "/faciais-corporais/kit-banho-de-lua-babalo-tut-frut.jpeg",
+      },
+      {
+        id: 66,
+        name: "Kit banho de lua antialérgico de rosa mosqueta",
+        price: 30.00,
+        description: `Kit banho de lua antialérgico de rosa mosqueta( pelos dourados,pele limpa e hidratada, não arde, não pinica)
+        Esfoliante clareador 
+        Água oxigenada 
+        Pó descolorante 
+        Óleo protetor 
+        Sabonete líquido 
+        Hidratante 
+        Espátula 
+        Luva 
+        Touca`,
+        imageUrl: "/faciais-corporais/kit-banho-de-lua-rosa-mosqueta.jpeg",
+      },
+      {
+        id: 67,
+        name: "Kit banho de lua antialérgico de pêssego",
+        price: 30.00,
+        description: `Kit banho de lua antialérgico de pêssego ( pelos dourados,pele limpa e hidratada, não arde, não pinica)
+        Esfoliante clareador 
+        Água oxigenada 
+        Pó descolorante 
+        Óleo protetor 
+        Sabonete líquido 
+        Hidratante 
+        Espátula 
+        Luva 
+        Touca`,
+        imageUrl: "/faciais-corporais/kit-banho-de-lua-pessego.jpeg",
+      },
+      {
+        id: 68,
+        name: "Kit banho de lua antialérgico de morango",
+        price: 30.00,
+        description: `Kit banho de lua antialérgico de morango ( pelos dourados,pele limpa e hidratada, não arde, não pinica)
+        Esfoliante clareador 
+        Água oxigenada 
+        Pó descolorante 
+        Óleo protetor 
+        Sabonete líquido 
+        Hidratante 
+        Espátula 
+        Luva 
+        Touca`,
+        imageUrl: "/faciais-corporais/kit-banho-de-lua-moeango.jpeg",
+      },
+      {
+        id: 69,
+        name: "Kit Labotrat morango",
+        price: 40.00,
+        description: `Kit Labotrat Esfoliante 150g + Hidratante 190g Morango`,
+        imageUrl: "/faciais-corporais/kit-hidratante-esfoliante-morango.jpeg",
+      },
+      {
+        id: 70,
+        name: "Kit Labotrat cereja",
+        price: 40.00,
+        description: `Kit Labotrat Esfoliante 150g + Hidratante 190g cereja`,
+        imageUrl: "/faciais-corporais/kit-hidratante-esfoliante-cereja.jpeg",
+      },
+      {
+        id: 71,
+        name: "Kit Labotrat melancia",
+        price: 40.00,
+        description: `Kit Labotrat Esfoliante 150g + Hidratante 190g Melancia `,
+        imageUrl: "/faciais-corporais/kit-hidratante-esfoliante-melancia.jpeg",
+      },
+      {
+        id: 72,
+        name: "Kit Labotrat pitaya",
+        price: 40.00,
+        description: `Kit Labotrat Esfoliante 150g + Hidratante 190g Pitaya`,
+        imageUrl: "/faciais-corporais/kit-hidratante-esfoliante-pitaya.jpeg",
+      },
+      {
+        id: 73,
+        name: "Kit banho de lua antialérgico babbaloo morango",
+        price: 30.00,
+        description: `Kit banho de lua antialérgico babbaloo morango (pelos dourados,pele limpa e hidratada, não arde, não pinica)
+        Esfoliante clareador 
+        Água oxigenada 
+        Pó descolorante 
+        Óleo protetor 
+        Sabonete líquido 
+        Hidratante 
+        Espátula 
+        Luva 
+        Touca`,
+        imageUrl: "/faciais-corporais/kit-banho-de-lua-babalo-morango.jpeg",
       },
 
     ]
   },
   {
     id: 6,
-    name: "Perfumes",
+    name: "Sabonetes",
     products: [
       {
-        id: 11,
-        name: "Hidratante corporal de amêndoas",
-        price: 35.00,
-        description: `Um hidratante de amêndoas que nutre profundamente a pele, deixando-a macia e com um brilho saudável. Ideal para peles secas e sensíveis.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        id: 74,
+        name: "Sabonete íntimo mentos morango ",
+        price: 12.00,
+        description: `Age reequilibrando o pH, evita maus odores, além de proporcionar cuidado e sensação de bem-estar prolongada. 250ml`,
+        imageUrl: "/Sabonetes/sabonete-intimo-mentos.jpeg",
       },
       {
-        id: 11,
-        name: "Hidratante corporal de amêndoas",
-        price: 35.00,
-        description: `Um hidratante de amêndoas que nutre profundamente a pele, deixando-a macia e com um brilho saudável. Ideal para peles secas e sensíveis.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        id: 75,
+        name: "Sabonete íntimo babbaloo de banana ",
+        price: 12.00,
+        description: `Age reequilibrando o pH, evita maus odores, além de proporcionar cuidado e sensação de bem-estar prolongada. 250ml`,
+        imageUrl: "/Sabonetes/sabonete-babalo-banana.jpeg",
       },
       {
-        id: 11,
-        name: "Hidratante corporal de amêndoas",
-        price: 35.00,
-        description: `Um hidratante de amêndoas que nutre profundamente a pele, deixando-a macia e com um brilho saudável. Ideal para peles secas e sensíveis.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        id: 76,
+        name: "Sabonete íntimo fini beijinho ",
+        price: 12.00,
+        description: `Age reequilibrando o pH, evita maus odores, além de proporcionar cuidado e sensação de bem-estar prolongada. 250ml`,
+        imageUrl: "/Sabonetes/sabonete-intimo-fini-beijinho.jpeg",
       },
       {
-        id: 11,
-        name: "Hidratante corporal de amêndoas",
-        price: 35.00,
-        description: `Um hidratante de amêndoas que nutre profundamente a pele, deixando-a macia e com um brilho saudável. Ideal para peles secas e sensíveis.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        id: 77,
+        name: "Sabonete rosa mosqueta líquido",
+        price: 12.00,
+        description: `Corporal - Facial ,corporal e íntimo
+        Ph balanceado, hidratante, antisséptico. 200ml`,
+        imageUrl: "/Sabonetes/sabonete-liquido-rosa-mosqueta.jpeg",
       },
       {
-        id: 11,
-        name: "Hidratante corporal de amêndoas",
-        price: 35.00,
-        description: `Um hidratante de amêndoas que nutre profundamente a pele, deixando-a macia e com um brilho saudável. Ideal para peles secas e sensíveis.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        id: 78,
+        name: "Sabonete em barra rosa mosqueta 90g",
+        price: 12.00,
+        description: ``,
+        imageUrl: "/Sabonetes/sabonete-barra-rosa-mosqueta.jpeg",
       },
       {
-        id: 11,
-        name: "Hidratante corporal de amêndoas",
-        price: 35.00,
-        description: `Um hidratante de amêndoas que nutre profundamente a pele, deixando-a macia e com um brilho saudável. Ideal para peles secas e sensíveis.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        id: 79,
+        name: "Sabonete em barra argila verde",
+        price: 12.00,
+        description: ``,
+        imageUrl: "/Sabonetes/sabonete-barra-argila-verde.jpeg",
       },
       {
-        id: 11,
-        name: "Hidratante corporal de amêndoas",
-        price: 35.00,
-        description: `Um hidratante de amêndoas que nutre profundamente a pele, deixando-a macia e com um brilho saudável. Ideal para peles secas e sensíveis.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
+        id: 80,
+        name: "Mousse de rosa mosqueta",
+        price: 28.00,
+        description: `Mousse de rosa mosqueta limpeza facial 
+        (Sabonete facial) `,
+        imageUrl: "/Sabonetes/sabonete-facial-rosa-mosqueta.jpeg",
       },
-      {
-        id: 11,
-        name: "Hidratante corporal de amêndoas",
-        price: 35.00,
-        description: `Um hidratante de amêndoas que nutre profundamente a pele, deixando-a macia e com um brilho saudável. Ideal para peles secas e sensíveis.`,
-        imageUrl: "/hidratante-amendoas.jpeg",
-      },
+      
 
     ]
   },
