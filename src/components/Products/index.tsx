@@ -4,6 +4,8 @@ export interface Product {
   price: number;
   description: string;
   imageUrl: string;
+  quantity: number;
+  
 }
 
 export interface Category {
@@ -26,6 +28,8 @@ export const categories: Category[] = [
         na pele, como melasma, manchas solares, hiperpigmentação ou acne. Ele contém ativos clareadores, como hidroquinona, ácido kójico ou vitamina C, que ajudam a reduzir a produção de melanina, a substância responsável pela coloração da pele.
         Indicado usar protetor solar durante o dia.`,
         imageUrl: "/Clareadores/clareador-extra-fortes.jpeg",
+        quantity: 0,
+
       },
       {
         id: 3,
@@ -41,6 +45,7 @@ export const categories: Category[] = [
         Luva 
         Touca`,
         imageUrl: "/Clareadores/Clareador-de-manchas.jpeg",
+        quantity: 0,
       },
       {
         id: 4,
@@ -50,6 +55,7 @@ export const categories: Category[] = [
          proporcionando um aspecto mais saudável e radiante. Ela é frequentemente utilizada em máscaras faciais para dar uma aparência mais uniforme à pele.
         Controle da oleosidade`,
         imageUrl: "/Clareadores/argila-branca.jpeg",
+        quantity: 0,
       },
       {
         id: 5,
@@ -57,6 +63,7 @@ export const categories: Category[] = [
         price: 30.00,
         description: `A gomagem clareadora é uso facial e corporal,ela ajuda uniformizar o tom da pele e a reduzir manchas causadas pelo sol, acne, ou melasma.`,
         imageUrl: "/Clareadores/gomagem.jpeg",
+        quantity: 0,
       },
       {
         id: 6,
@@ -68,6 +75,7 @@ export const categories: Category[] = [
         Hidratação da pele 
         Prevenção e tratamento das estrias.`,
         imageUrl: "/Clareadores/pomada-rosa-mosqueta.jpeg",
+        quantity: 0,
       },
       {
         id: 7,
@@ -75,6 +83,7 @@ export const categories: Category[] = [
         price: 20.00,
         description: `Pomada de açafrão indicada para tratamento de inflamações e irritações na pele, é cicatrizante de feridas e manchas, reduz manchas e hipergmentação.`,
         imageUrl: "/Clareadores/pomada-acafrao.jpeg",
+        quantity: 0,
       },
       {
         id: 8,
@@ -82,6 +91,7 @@ export const categories: Category[] = [
         price: 25.00,
         description: `A dolomita possui propriedades alcalinizantes, anti-inflamatórias, antissépticas, calmantes, clareadoras, cicatrizantes e tonificantes. Indicada para rosto e corpo.`,
         imageUrl: "/Clareadores/dolomita.jpeg",
+        quantity: 0,
       },
       {
         id: 9,
@@ -90,6 +100,7 @@ export const categories: Category[] = [
         description: `Tira manchas & secas espinhas é um creme capaz de eliminar espinhas e diminuir manchas da pele causadas por exposição excessiva ao sol. Modo se usar:
         Aplicar o tira manchas & seca espinhas no local desejado, massageie por alguns instantes até sua completa absorção. Recomendamos uso noturno, sempre antes de dormir.`,
         imageUrl: "/Clareadores/tira-manchas.jpeg",
+        quantity: 0,
       },
       {
         id: 10,
@@ -98,6 +109,7 @@ export const categories: Category[] = [
         description: `O clareador íntimo extra forte é utilizado para clarear a pele em áreas íntimas, como 
         a virilha, axilas. Ele contém substâncias que ajudam a reduzir a hiperpigmentação, suavizando a tonalidade da pele e clareando.`,
         imageUrl:"/Clareadores/clareador-extra-forte-intimo.jpeg",
+        quantity: 0,
       },
     ],
 
@@ -113,6 +125,7 @@ export const categories: Category[] = [
         price: 20.00,
         description: `Para cabelos quebradiços, finos e fracos.`,
         imageUrl: "/Linha-capilar/tonica-ante-queda.jpeg",
+        quantity: 0,
       },
       {
         id: 12,
@@ -120,6 +133,7 @@ export const categories: Category[] = [
         price: 20.00,
         description: `Hidratação intensa, brilho intenso, anti frizz.`,
         imageUrl: "/Linha-capilar/olho-reparador-rosa-mosqueta.jpeg",
+        quantity: 0,
       },
       {
         id: 13,
@@ -127,6 +141,7 @@ export const categories: Category[] = [
         price: 20.00,
         description: `Anti frizz, hidrata, nutre, para todos os tipos de cabelos.`,
         imageUrl: "/Linha-capilar/oleo-reparador-argan.jpeg",
+        quantity: 0,
       },
       {
         id: 14,
@@ -134,6 +149,7 @@ export const categories: Category[] = [
         price: 20.00,
         description: ``,
         imageUrl: "/Linha-capilar/perfume-capilar.jpeg",
+        quantity: 0,
       },
       {
         id: 15,
@@ -141,6 +157,7 @@ export const categories: Category[] = [
         price: 30.00,
         description: ``,
         imageUrl: "/Linha-capilar/spray-reconstrucao.jpeg",
+        quantity: 0,
       },
       {
         id: 16,
@@ -149,6 +166,7 @@ export const categories: Category[] = [
         description: `O Spray Selante 10 Benefícios Liso com Força é um finalizador 
           capaz de melhorar a penteabilidade dos fios e auxiliar no processo de escovação, deixando os cabelos alinhados por mais tempo.`,
         imageUrl: "/Linha-capilar/protetor-termico.jpeg",
+        quantity: 0,
       },
       {
         id: 17,
@@ -159,6 +177,7 @@ export const categories: Category[] = [
         1 máscara de hidratação 500ml
         1 condicionador 500ml`,
         imageUrl: "/Linha-capilar/kit-shampoo-antiqueda.jpeg",
+        quantity: 0,
       },
       {
         id: 18,
@@ -166,6 +185,7 @@ export const categories: Category[] = [
         price: 25.00,
         description: `Acelera o crescimento dos fios, fortalece, reduz a queda e quebra`,
         imageUrl: "/Linha-capilar/tonico-rampunzel.jpeg",
+        quantity: 0,
       },
       {
         id: 19,
@@ -177,6 +197,7 @@ export const categories: Category[] = [
         1 condicionador 500ml
         1 óleo de ervas`,
         imageUrl: "/Linha-capilar/kit-shampoo-rapunzel.jpeg",
+        quantity: 0,
       },
       {
         id: 20,
@@ -184,6 +205,7 @@ export const categories: Category[] = [
         price: 45.00,
         description: ``,
         imageUrl: "/Linha-capilar/vitamina-capilar.jpeg",
+        quantity: 0,
       },
       {
         id: 21,
@@ -191,6 +213,7 @@ export const categories: Category[] = [
         price: 50.00,
         description: `  `,
         imageUrl: "/Linha-capilar/kit-shampoo-bababeu-morango.jpeg",
+        quantity: 0,
       },
       {
         id: 22,
@@ -198,6 +221,7 @@ export const categories: Category[] = [
         price: 50.00,
         description: `  `,
         imageUrl: "/Linha-capilar/kit-babel-tutifrut.jpeg",
+        quantity: 0,
       },
       {
         id: 23,
@@ -209,6 +233,7 @@ export const categories: Category[] = [
         1 máscara de hidratação 300ml
         1 condicionador 300ml`,
         imageUrl: "/Linha-capilar/kit-babalu-banana.jpeg",
+        quantity: 0,
       },
       {
         id: 24,
@@ -219,6 +244,7 @@ export const categories: Category[] = [
         1 máscara de hidratação 300ml
         1 condicionador 300ml`,
         imageUrl: "/Linha-capilar/kit-babalu-uva.jpeg",
+        quantity: 0,
       },
       {
         id: 25,
@@ -230,6 +256,7 @@ export const categories: Category[] = [
         1 máscara de hidratação 300ml
         1 condicionador 300ml`,
         imageUrl: "/Linha-capilar/kit-babalu-tutifrut.jpeg",
+        quantity: 0,
       },
       {
         id: 26,
@@ -241,6 +268,7 @@ export const categories: Category[] = [
         1 máscara de hidratação 300ml
         1 condicionador 300ml`,
         imageUrl: "/Linha-capilar/kit-babalu-maça-verde.jpeg",
+        quantity: 0,
       },
       {
         id: 27,
@@ -252,6 +280,7 @@ export const categories: Category[] = [
         valor promocional 30$
         O minoxidil é um medicamento tópico utilizado para o tratamento da queda de cabelo, estimulando o crescimento de novos fios.`,
         imageUrl: "/Linha-capilar/kit-minoxidil.jpeg",
+        quantity: 0,
       },
       {
         id: 28,
@@ -263,6 +292,7 @@ export const categories: Category[] = [
         1 máscara de hidratação 300ml
         1 condicionador 300ml`,
         imageUrl: "/Linha-capilar/ativador-cachos.jpeg",
+        quantity: 0,
       },
       {
         id: 29,
@@ -274,6 +304,8 @@ export const categories: Category[] = [
         1 máscara de hidratação 300ml
         1 condicionador 300ml`,
         imageUrl: "/Linha-capilar/kit-fini-beijinho.jpeg",
+        quantity: 0,
+        
       },
       {
         id: 30,
@@ -285,6 +317,7 @@ export const categories: Category[] = [
         1 máscara de hidratação 300ml
         1 condicionador 300ml`,
         imageUrl: "/Linha-capilar/kit-babalu-melancia.jpeg",
+        quantity: 0,
       },
       {
         id: 31,
@@ -295,6 +328,7 @@ export const categories: Category[] = [
         1 máscara de hidratação 300ml
         1 condicionador 300ml`,
         imageUrl: "/Linha-capilar/kit-babalu-morango.jpeg",
+        quantity: 0,
       },
 
     ]
@@ -310,6 +344,7 @@ export const categories: Category[] = [
         description: `A touca de cetim, com sua textura suave e lisa, reduz esse atrito, preservando a integridade dos fios. Além disso,
          a touca de cetim também ajuda a manter a hidratação dos cabelos`,
         imageUrl: "/Acessorios/toca-cetin.jpeg",
+        quantity: 0,
       },
       {
         id: 33,
@@ -317,6 +352,7 @@ export const categories: Category[] = [
         price: 5.00,
         description: ``,
         imageUrl: "/Acessorios/xuxa-cetin.jpeg",
+        quantity: 0,
       },
       {
         id: 34,
@@ -327,6 +363,7 @@ export const categories: Category[] = [
         a escova polvo. Ela é ótima pra qualquer tipo de fio!
         `,
         imageUrl: "/Acessorios/escova-pouvo.jpeg",
+        quantity: 0,
       },
       {
         id: 35,
@@ -335,6 +372,7 @@ export const categories: Category[] = [
         description: `A Escova Magica é perfeita para desembaraçar todos os tipos de cabelo sem esforços.
          As cerdas das escovas são delicadas para que não danifique o couro cabeludo.`,
         imageUrl: "/Acessorios/escova-magica.jpeg",
+        quantity: 0,
       },
       {
         id: 36,
@@ -343,6 +381,7 @@ export const categories: Category[] = [
         description: `Remove delicadamente as células mortas, resíduos de produtos e sujeira.
          Indicado para todos os tipos de cabelo, Pode ser usado nos cabelos secos ou molhados, auxiliando na aplicação de produtos óleos e afins.`,
         imageUrl: "/Acessorios/massageador-capilar.jpeg",
+        quantity: 0,
       },
       {
         id: 37,
@@ -350,6 +389,7 @@ export const categories: Category[] = [
         price: 12.00,
         description: `Ideal para desembaraçar os fios. Reduz a quebra dos fios e possui passagem de ar que auxilia na secagem.`,
         imageUrl: "/Acessorios/escova-raquete.jpeg",
+        quantity: 0,
       },
 
     ]
@@ -364,6 +404,7 @@ export const categories: Category[] = [
         price: 20.00,
         description: `Body Splash 130ml, Tutti frutti e morango `,
         imageUrl: "/Perfumes-fragrancias/body-spresh-babalo.jpeg",
+        quantity: 0,
       },
       {
         id: 39,
@@ -371,6 +412,7 @@ export const categories: Category[] = [
         price: 30.00,
         description: ``,
         imageUrl: "/Perfumes-fragrancias/body-spresh-arabe.jpeg",
+        quantity: 0,
       },
       {
         id: 40,
@@ -379,6 +421,7 @@ export const categories: Category[] = [
         description: `Perfume miniatura fantasy 30ml  Dreeam
         (INPIR. Fantasy de Britney Spreace) `,
         imageUrl: "/Perfumes-fragrancias/miniatura-fantasy.jpeg",
+        quantity: 0,
       },
       {
         id: 41,
@@ -386,6 +429,7 @@ export const categories: Category[] = [
         price: 45.00,
         description: ``,
         imageUrl: "/Perfumes-fragrancias/kir-glow-red.jpeg",
+        quantity: 0,
       },
       {
         id: 42,
@@ -393,6 +437,7 @@ export const categories: Category[] = [
         price: 80.00,
         description: ``,
         imageUrl: "/Perfumes-fragrancias/miniatura-invictos.jpeg",
+        quantity: 0,
       },
       {
         id: 43,
@@ -400,6 +445,7 @@ export const categories: Category[] = [
         price: 70.00,
         description: `Perfume miniatura de 30ml`,
         imageUrl: "/Perfumes-fragrancias/miniatura-ferrari.jpeg",
+        quantity: 0,
       },
       {
         id: 44,
@@ -409,6 +455,7 @@ export const categories: Category[] = [
         01 Body Splash Plié 60ml
         Família Olfativa: Oriental Floral`,
         imageUrl: "/Perfumes-fragrancias/kit-bory-spresh-hidratante-dile.jpeg",
+        quantity: 0,
       },
       {
         id: 45,
@@ -417,6 +464,7 @@ export const categories: Category[] = [
         description: `Contém 01 hidratante perfumado Amora 60ml e 01 Body Splash Amora 60ml;
         Família Olfativa: Frutal`,
         imageUrl: "/Perfumes-fragrancias/kit-bory-spresh-hidratante-amora.jpeg",
+        quantity: 0,
       },
       {
         id: 46,
@@ -425,6 +473,7 @@ export const categories: Category[] = [
         description: `Contém 01 hidratante perfumado Coconut 60ml e 01 Body Splash Coconut 60ml;
         Família Olfativa: Frutal Doce`,
         imageUrl: "/Perfumes-fragrancias/kit-bory-spresh-hidratante-coconut.jpeg",
+        quantity: 0,
       },
       {
         id: 47,
@@ -433,6 +482,7 @@ export const categories: Category[] = [
         description: `Pokoloka- Body Splash 60ML + Hidratante Corporal 60ML Body Splash Vanilla - Pokoloka.
         Deixa a pele suavemente perfumada ao longo do dia. Fragrância VANILLA : Floral Baunilha`,
         imageUrl: "/Perfumes-fragrancias/kit-bory-spresh-hidratante-vanila.jpeg",
+        quantity: 0,
       },
       {
         id: 48,
@@ -440,6 +490,7 @@ export const categories: Category[] = [
         price: 80.00,
         description: `FEMININO EAU DE PARFUM 40ml `,
         imageUrl: "/Perfumes-fragrancias/perfume-carolina.jpeg",
+        quantity: 0,
       },
       {
         id: 49,
@@ -447,6 +498,7 @@ export const categories: Category[] = [
         price: 15.00,
         description: ``,
         imageUrl: "/Perfumes-fragrancias/body-spresh-fine-dentinho.jpeg",
+        quantity: 0,
       },
       {
         id: 50,
@@ -454,6 +506,7 @@ export const categories: Category[] = [
         price: 15.00,
         description: ``,
         imageUrl: "/Perfumes-fragrancias/body-spresh-fine-bubes.jpeg",
+        quantity: 0,
       },
       {
         id: 51,
@@ -461,6 +514,7 @@ export const categories: Category[] = [
         price: 15.00,
         description: ``,
         imageUrl: "/Perfumes-fragrancias/body-spresh-fine-beijinho.jpeg",
+        quantity: 0,
       },
       {
         id: 52,
@@ -468,6 +522,7 @@ export const categories: Category[] = [
         price: 15.00,
         description: ` `,
         imageUrl: "/Perfumes-fragrancias/hidratante-corporal-babalo-tuti-frut.jpeg",
+        quantity: 0,
       },
       {
         id: 53,
@@ -475,6 +530,7 @@ export const categories: Category[] = [
         price: 15.00,
         description: ``,
         imageUrl: "/Perfumes-fragrancias/hidratante-coporal-babalo-uva.jpeg",
+        quantity: 0,
       },
       {
         id: 54,
@@ -482,6 +538,7 @@ export const categories: Category[] = [
         price: 15.00,
         description: ``,
         imageUrl: "/Perfumes-fragrancias/hidratante-corporal-babalo-morango.jpeg",
+        quantity: 0,
       },
       {
         id: 55,
@@ -490,6 +547,7 @@ export const categories: Category[] = [
         description: `Hidratante Fragrância Árabe Eclipse Dourado, é uma combinação luxuosa de
          ingredientes naturais que proporciona hidratação e maciez à pele. Com uma fragrância envolvente, deixa a pele suave e sedosa.`,
         imageUrl: "/Perfumes-fragrancias/hidratante-corporal-arabe.jpeg",
+        quantity: 0,
       },
       {
         id: 56,
@@ -499,6 +557,7 @@ export const categories: Category[] = [
          marca Miss Rose é uma fragrância refrescante que combina notas florais e frutadas, proporcionando uma sensação de leveza e bem-estar. 
          Ideal para o dia a dia, seu aroma é sútil `,
         imageUrl: "/Perfumes-fragrancias/hidratante-arabe-miss-rose.jpeg",
+        quantity: 0,
       },
 
     ]
@@ -513,6 +572,7 @@ export const categories: Category[] = [
         price: 25.00,
         description: `Esfoliante clareador babbaloo tutti frutti (facial e corporal)500g`,
         imageUrl: "/faciais-corporais/esfoliante-clareador-babalo-tut-frut.jpeg",
+        quantity: 0,
       },
       {
         id: 58,
@@ -520,6 +580,7 @@ export const categories: Category[] = [
         price: 25.00,
         description: `Esfoliante clareador babbaloo uva(facial e corporal) 500g `,
         imageUrl: "/faciais-corporais/esfoliante-clareador-babalo-uva.jpeg",
+        quantity: 0,
       },
       {
         id: 59,
@@ -527,6 +588,7 @@ export const categories: Category[] = [
         price: 25.00,
         description: `Esfoliante clareador babbaloo morango (facial e corporal) 500g`,
         imageUrl: "/faciais-corporais/esfoliante-clareador-morango.jpeg",
+        quantity: 0,
       },
       {
         id: 60,
@@ -534,6 +596,7 @@ export const categories: Category[] = [
         price: 25.00,
         description: `Esfoliante clareador babbaloo melancia (facial e corporal) 500g`,
         imageUrl: "/faciais-corporais/esfoliante-clareador-melancia.jpeg",
+        quantity: 0,
       },
       {
         id: 61,
@@ -542,6 +605,7 @@ export const categories: Category[] = [
         description: `Esfoliante clareador pó de arroz 
         (Facial e corporal) auxiliar na remoção das células mortas, renovando a pele e amenizando manchas superficiais. Indicado para todos os tipos de pele.`,
         imageUrl: "/faciais-corporais/esfoliante-clareador-pó-arroz.jpeg",
+        quantity: 0,
       },
       {
         id: 62,
@@ -550,6 +614,7 @@ export const categories: Category[] = [
         description: `Esfoliante clareador de rosa mosqueta (facial e corporal) oferece uma renovação celular eficaz, estimula o colágeno e desobstrui poros
         , clareia manchas, previne acnes e foliculites. Sua fórmula, combinada ao uso do sabonete e hidratante, promove uma abordagem completa para a saúde e vitalidade da pele.`,
         imageUrl: "/faciais-corporais/esfoliante-clareador-rosa-mosqueta.jpeg",
+        quantity: 0,
       },
       {
         id: 63,
@@ -560,6 +625,7 @@ export const categories: Category[] = [
         promovendo uma esfoliação suave. Isso pode melhorar a textura da pele, deixando-a mais macia, suave e renovada.
          Clareamento da pele: O açafrão é conhecido por suas propriedades clareadoras naturais`,
         imageUrl: "/faciais-corporais/esfoliante-clareador-acafrao.jpeg",
+        quantity: 0,
       },
       {
         id: 64,
@@ -576,6 +642,7 @@ export const categories: Category[] = [
         Luva 
         Touca`,
         imageUrl: "/faciais-corporais/kit-banho-de-lua-babalo-uva.jpeg",
+        quantity: 0,
       },
       {
         id: 65,
@@ -592,6 +659,7 @@ export const categories: Category[] = [
         Luva 
         Touca`,
         imageUrl: "/faciais-corporais/kit-banho-de-lua-babalo-tut-frut.jpeg",
+        quantity: 0,
       },
       {
         id: 66,
@@ -608,6 +676,7 @@ export const categories: Category[] = [
         Luva 
         Touca`,
         imageUrl: "/faciais-corporais/kit-banho-de-lua-rosa-mosqueta.jpeg",
+        quantity: 0,
       },
       {
         id: 67,
@@ -624,6 +693,7 @@ export const categories: Category[] = [
         Luva 
         Touca`,
         imageUrl: "/faciais-corporais/kit-banho-de-lua-pessego.jpeg",
+        quantity: 0,
       },
       {
         id: 68,
@@ -640,6 +710,7 @@ export const categories: Category[] = [
         Luva 
         Touca`,
         imageUrl: "/faciais-corporais/kit-banho-de-lua-moeango.jpeg",
+        quantity: 0,
       },
       {
         id: 69,
@@ -647,6 +718,7 @@ export const categories: Category[] = [
         price: 40.00,
         description: `Kit Labotrat Esfoliante 150g + Hidratante 190g Morango`,
         imageUrl: "/faciais-corporais/kit-hidratante-esfoliante-morango.jpeg",
+        quantity: 0,
       },
       {
         id: 70,
@@ -654,6 +726,7 @@ export const categories: Category[] = [
         price: 40.00,
         description: `Kit Labotrat Esfoliante 150g + Hidratante 190g cereja`,
         imageUrl: "/faciais-corporais/kit-hidratante-esfoliante-cereja.jpeg",
+        quantity: 0,
       },
       {
         id: 71,
@@ -661,6 +734,7 @@ export const categories: Category[] = [
         price: 40.00,
         description: `Kit Labotrat Esfoliante 150g + Hidratante 190g Melancia `,
         imageUrl: "/faciais-corporais/kit-hidratante-esfoliante-melancia.jpeg",
+        quantity: 0,
       },
       {
         id: 72,
@@ -668,6 +742,7 @@ export const categories: Category[] = [
         price: 40.00,
         description: `Kit Labotrat Esfoliante 150g + Hidratante 190g Pitaya`,
         imageUrl: "/faciais-corporais/kit-hidratante-esfoliante-pitaya.jpeg",
+        quantity: 0,
       },
       {
         id: 73,
@@ -684,6 +759,7 @@ export const categories: Category[] = [
         Luva 
         Touca`,
         imageUrl: "/faciais-corporais/kit-banho-de-lua-babalo-morango.jpeg",
+        quantity: 0,
       },
 
     ]
@@ -698,6 +774,7 @@ export const categories: Category[] = [
         price: 12.00,
         description: `Age reequilibrando o pH, evita maus odores, além de proporcionar cuidado e sensação de bem-estar prolongada. 250ml`,
         imageUrl: "/Sabonetes/sabonete-intimo-mentos.jpeg",
+        quantity: 0,
       },
       {
         id: 75,
@@ -705,6 +782,7 @@ export const categories: Category[] = [
         price: 12.00,
         description: `Age reequilibrando o pH, evita maus odores, além de proporcionar cuidado e sensação de bem-estar prolongada. 250ml`,
         imageUrl: "/Sabonetes/sabonete-babalo-banana.jpeg",
+        quantity: 0,
       },
       {
         id: 76,
@@ -712,6 +790,7 @@ export const categories: Category[] = [
         price: 12.00,
         description: `Age reequilibrando o pH, evita maus odores, além de proporcionar cuidado e sensação de bem-estar prolongada. 250ml`,
         imageUrl: "/Sabonetes/sabonete-intimo-fini-beijinho.jpeg",
+        quantity: 0,
       },
       {
         id: 77,
@@ -720,6 +799,7 @@ export const categories: Category[] = [
         description: `Corporal - Facial ,corporal e íntimo
         Ph balanceado, hidratante, antisséptico. 200ml`,
         imageUrl: "/Sabonetes/sabonete-liquido-rosa-mosqueta.jpeg",
+        quantity: 0,
       },
       {
         id: 78,
@@ -727,6 +807,7 @@ export const categories: Category[] = [
         price: 12.00,
         description: ``,
         imageUrl: "/Sabonetes/sabonete-barra-rosa-mosqueta.jpeg",
+        quantity: 0,
       },
       {
         id: 79,
@@ -734,6 +815,7 @@ export const categories: Category[] = [
         price: 12.00,
         description: ``,
         imageUrl: "/Sabonetes/sabonete-barra-argila-verde.jpeg",
+        quantity: 0,
       },
       {
         id: 80,
@@ -742,6 +824,7 @@ export const categories: Category[] = [
         description: `Mousse de rosa mosqueta limpeza facial 
         (Sabonete facial) `,
         imageUrl: "/Sabonetes/sabonete-facial-rosa-mosqueta.jpeg",
+        quantity: 0,
       },
       
 

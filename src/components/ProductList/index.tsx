@@ -1,83 +1,66 @@
 "use client";
 
 import { useState } from "react";
-import { categories } from "../Products";
-import Image from 'next/image';
+import { Product } from "../Products";
+import Image from "next/image";
 
-export const ProductList = () => {
-  // Criando um estado que armazena a visibilidade das descrições de cada produto
-  const [descriptionVisibility, setDescriptionVisibility] = useState<{ [key: string]: boolean }>({});
+interface ProductListProps {
+  addItemToCart: (product: Product) => void;
+  products: Product[]; // Recebe a lista de produtos
+}
 
-  const toggleDescription = (productId: string) => {
+export function ProductList({ addItemToCart, products }: ProductListProps) {
+  // Certificando-se de que a chave de descriptionVisibility seja do tipo string
+  const [descriptionVisibility, setDescriptionVisibility] = useState<Record<string, boolean>>({});
+
+  const toggleDescription = (productId: number) => {
+    // Convertendo o id do produto para string ao usá-lo como chave
+    const productIdStr = String(productId);
+
     // Inverte o estado de mostrar/ocultar descrição para o produto específico
     setDescriptionVisibility((prevState) => ({
       ...prevState,
-      [productId]: !prevState[productId],
+      [productIdStr]: !prevState[productIdStr], // Usando a chave como string
     }));
   };
 
   return (
-    <div>
-      {categories.map((category) => (
-        <div key={category.id} style={{ marginBottom: "20px" }}>
-          <h2 className="text-xl font-bold p-2 ">{category.name}</h2>
-          <div
-            style={{
-              display: "flex",
-              overflowX: "auto",
-              padding: "10px 0",
-            }}
-          >
-            {category.products.map((product) => {
-              // Definindo a visibilidade da descrição com base no ID do produto
-              const showFullDescription = descriptionVisibility[product.id] || false;
+    <div className="container mx-auto px-4 py-4">
+      <h2 className="text-2xl font-bold mb-4">Produtos</h2>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        {products.map((product) => {
+          const showFullDescription = descriptionVisibility[String(product.id)] || false;
+          const shortDescription = product.description.slice(0, 100); // Exibe os primeiros 100 caracteres
+          const fullDescription = product.description;
 
-              // Exibe apenas um pedaço da descrição
-              const shortDescription = product.description.slice(0, 100); // Exibe os primeiros 100 caracteres
-              const fullDescription = product.description;
-
-              return (
-                <div
-                  key={product.id}
-                  style={{
-                    border: "1px solid #ccc",
-                    margin: "10px",
-                    padding: "10px",
-                    maxWidth: "200px",
-                    flexShrink: 0,
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                  }}
+          return (
+            <div key={product.id} className="border p-4 rounded-lg">
+              <Image
+                src={product.imageUrl}
+                alt={product.name}
+                className="w-full h-40 object-cover mb-2"
+              />
+              <h3 className="text-lg font-semibold">{product.name}</h3>
+              <p className="text-gray-500">R$ {product.price.toFixed(2)}</p>
+              <p className="text-gray-600 mt-2">
+                {showFullDescription ? fullDescription : shortDescription}{" "}
+                <span
+                  className="text-blue-500 cursor-pointer"
+                  onClick={() => toggleDescription(product.id)} // Usando product.id
                 >
-                  <Image
-                    src={product.imageUrl}
-                    alt={product.name}
-                    style={{ width: "100%", height: "auto" }}
-                    width={200} // Adicionei as propriedades width e height
-                    height={200}
-                  />
-                  <h3 className="text-base font-bold">{product.name}</h3>
-                  <p className="text-center">
-                    {showFullDescription ? fullDescription : shortDescription}{" "}
-                    <span
-                      className="text-blue-50"
-                      onClick={() => toggleDescription(product.name)}
-                      style={{ color: "blue", cursor: "pointer" }}
-                    >
-                      {showFullDescription ? "Mostrar menos" : "Mostrar mais"}
-                    </span>
-                  </p>
-                  <p>
-                    <strong>Preço:</strong> R$ {product.price.toFixed(2)}
-                  </p>
-                  <button>Adicionar ao carrinho</button>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      ))}
+                  {showFullDescription ? "Mostrar menos" : "Mostrar mais"}
+                </span>
+              </p>
+              <button
+                onClick={() => addItemToCart(product)}
+                className="mt-2 bg-blue-500 text-white px-4 py-2 rounded"
+              >
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
-};
+}

@@ -1,13 +1,51 @@
 "use client";
 
+import { useState, useEffect } from "react";
+import { FaBars, FaShoppingCart } from "react-icons/fa";
+import { Cart } from "../Cart";
+import { Category } from "../Products";
 import Image from "next/image";
-import { useState } from "react";
-import { FaHeart, FaSearch, FaShoppingCart, FaBars } from "react-icons/fa";
 
-export default function Header() {
+interface HeaderProps {
+  cartItems: {
+    id: number;
+    name: string;
+    price: number;
+    quantity: number;
+    imageUrl: string;
+  }[];
+  toggleCart: () => void;
+  removeItem: (id: number) => void;
+  changeQuantity: (id: number, quantity: number) => void;
+  total: number;
+  cartOpen: boolean;
+  categories: Category[]; // Passar as categorias
+  setSelectedCategory: (category: string) => void; // Função para selecionar a categoria
+}
+
+export default function Header({
+  cartItems,
+  toggleCart,
+  removeItem,
+  changeQuantity,
+  total,
+  cartOpen,
+  categories,
+  setSelectedCategory,
+}: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
-  const [search, setSearch] = useState("");
+  const [itemCount, setItemCount] = useState(0); // Contagem de itens no carrinho
+
+  // Atualiza a contagem de itens no carrinho sempre que o carrinho muda
+  useEffect(() => {
+    const count = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+    setItemCount(count); // Atualiza a contagem de itens
+  }, [cartItems]);
+
+  const handleCategorySelect = (categoryName: string) => {
+    setSelectedCategory(categoryName);  // Seleciona a categoria
+    setMenuOpen(false);  // Fecha o menu após a seleção
+  };
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
@@ -32,91 +70,57 @@ export default function Header() {
           />
         </div>
 
-        {/* Ícones e Pesquisa */}
+        {/* Ícones e Carrinho */}
         <div className="flex items-center space-x-4">
-          {/* Pesquisa (Desktop ou Mobile Toggle) */}
-          <div className="hidden md:block flex-1">
-            <div className="relative">
-              <input
-                type="text"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                placeholder="Pesquise aqui..."
-                className="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
+          {/* Carrinho e Contador */}
+          <div className="flex items-center space-x-2">
+            <button
+              onClick={toggleCart}
+              aria-label="Carrinho"
+              className="text-gray-600 hover:text-blue-500"
+            >
+              <FaShoppingCart size={20} />
+            </button>
+            {/* Contagem de itens no carrinho */}
+            {itemCount > 0 && (
+              <span className="bg-red-500 text-white text-xs rounded-full px-2 py-1">
+                {itemCount}
+              </span>
+            )}
           </div>
-          <button
-            onClick={() => setSearchOpen(!searchOpen)}
-            aria-label="Pesquisar"
-            className="text-gray-600 hover:text-blue-500 md:hidden"
-          >
-            <FaSearch size={20} />
-          </button>
-
-          {/* Wishlist */}
-          <button aria-label="Wishlist" className="text-gray-600 hover:text-red-500">
-            <FaHeart size={20} />
-          </button>
-          {/* Carrinho */}
-          <button aria-label="Carrinho" className="text-gray-600 hover:text-blue-500">
-            <FaShoppingCart size={20} />
-          </button>
         </div>
       </div>
 
-      {/* Input de Pesquisa no Mobile */}
-      {searchOpen && (
-        <div className="absolute top-14 left-0 w-full bg-white shadow-md p-4 md:hidden">
-          <input
-            type="text"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder="Pesquise aqui..."
-            className="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-        </div>
-      )}
-
-      {/* Menu (Mobile e Desktop) */}
+      {/* Menu de Categorias (Mobile e Desktop) */}
       <nav
         className={`${
           menuOpen ? "block" : "hidden"
-        } md:block bg-white shadow-md p-4 md:p-2`}
+        } absolute  left-0 w-full bg-white shadow-md p-4 md:p-2 md:static md:flex md:space-x-4 md:justify-center`}
       >
         <ul className="flex flex-col md:flex-row md:space-x-4 md:justify-center space-y-2 md:space-y-0">
-          <li>
-            <a href="#" className="text-gray-700 hover:text-blue-500">
-              Perfumes e Fragrâncias
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-gray-700 hover:text-blue-500">
-            Cuidados faciais e corporais
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-gray-700 hover:text-blue-500">
-              Acessórios
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-gray-700 hover:text-blue-500">
-              Linha Capilar
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-gray-700 hover:text-blue-500">
-              Clareadores
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-gray-700 hover:text-blue-500">
-              Sabonetes
-            </a>
-          </li>
+          {categories.map((category) => (
+            <li key={category.id}>
+              <button
+                onClick={() => handleCategorySelect(category.name)}  // Fecha o menu e seleciona a categoria
+                className="text-gray-700 hover:text-blue-500 py-2 px-4 rounded-md transition-all duration-300 ease-in-out transform hover:scale-105"
+              >
+                {category.name}
+              </button>
+            </li>
+          ))}
         </ul>
       </nav>
+
+      {/* Exibir Carrinho */}
+      {cartOpen && (
+        <Cart
+          items={cartItems}
+          total={total}
+          closeCart={toggleCart}
+          removeItem={removeItem}
+          changeQuantity={changeQuantity}
+        />
+      )}
     </header>
   );
 }
