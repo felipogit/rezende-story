@@ -6,7 +6,7 @@ import { ProductList } from "@/components/ProductList";
 
 export default function Home() {
   return (
-    <div>
+    <div className="w-full h-screen  ">
      <Header />
      <Banner />
      <ProductList />

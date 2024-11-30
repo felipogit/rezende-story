@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { FaHeart, FaSearch, FaShoppingCart, FaBars } from "react-icons/fa";
 
@@ -22,10 +23,12 @@ export default function Header() {
 
         {/* Logo */}
         <div className="text-xl font-bold text-gray-800 flex-1 text-center md:text-left">
-          <img
+          <Image
             src="/logo.jpg"
             alt="Logo"
             className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover mx-auto md:mx-0"
+            width={50}
+            height={50}
           />
         </div>
 
