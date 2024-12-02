@@ -33,7 +33,7 @@ export function ProductList({ addItemToCart, products }: ProductListProps) {
           const fullDescription = product.description;
 
           return (
-            <div key={product.id} className="border p-4 rounded-lg">
+            <div key={product.id} className="border p-4 rounded-lg ">
               
               <img
                 
@@ -41,7 +41,7 @@ export function ProductList({ addItemToCart, products }: ProductListProps) {
                 alt={product.name}
                 className="w-full h-40 object-cover mb-2"
               />
-              <h3 className="text-lg font-semibold">{product.name}</h3>
+              <h3 className="text-lg font-semibold text-black">{product.name}</h3>
               <p className="text-gray-500">R$ {product.price.toFixed(2)}</p>
               <p className="text-gray-600 mt-2">
                 {showFullDescription ? fullDescription : shortDescription}{" "}
