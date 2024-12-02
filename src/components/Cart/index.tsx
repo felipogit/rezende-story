@@ -37,7 +37,7 @@ export const Cart: React.FC<CartProps> = ({ items, total, closeCart, removeItem,
   const whatsappMessage = generateWhatsAppMessage();
 
   // Link para abrir o WhatsApp com a mensagem formatada
-  const whatsappLink = `https://wa.me/5598981963708?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappLink = `https://wa.me/559881927414?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <div className="absolute top-14 right-0 w-80 bg-white shadow-md p-4 border rounded-lg">

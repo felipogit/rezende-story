@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Product } from "../Products";
-import Image from "next/image";
+
 
 interface ProductListProps {
   addItemToCart: (product: Product) => void;
@@ -35,10 +35,8 @@ export function ProductList({ addItemToCart, products }: ProductListProps) {
           return (
             <div key={product.id} className="border p-4 rounded-lg">
               
-              <Image
-                width={100}
-                height={40}
-                priority
+              <img
+                
                 src={product.imageUrl}
                 alt={product.name}
                 className="w-full h-40 object-cover mb-2"
