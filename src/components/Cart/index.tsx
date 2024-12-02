@@ -41,13 +41,13 @@ export const Cart: React.FC<CartProps> = ({ items, total, closeCart, removeItem,
 
   return (
     <div className="absolute top-14 right-0 w-80 bg-white shadow-md p-4 border rounded-lg">
-      <h3 className="text-xl font-bold mb-4">Carrinho de Compras</h3>
+      <h3 className="text-xl font-bold text-black mb-4 ">Carrinho de Compras</h3>
       
       {/* Lista de itens */}
       <ul className="space-y-4">
         {items.length > 0 ? (
           items.map((item) => (
-            <li key={item.id} className="flex items-center space-x-4">
+            <li key={item.id} className="flex items-center space-x-4 text-black">
               <img
                 src={item.imageUrl}
                 alt={item.name}
@@ -87,14 +87,14 @@ export const Cart: React.FC<CartProps> = ({ items, total, closeCart, removeItem,
             </li>
           ))
         ) : (
-          <li className="text-gray-500">Carrinho vazio</li>
+          <li className="text-black">Carrinho vazio</li>
         )}
       </ul>
 
       {/* Total */}
       <div className="flex justify-between mt-4">
-        <span>Total:</span>
-        <span>R$ {total.toFixed(2)}</span>
+        <span  className="font-bold text-black">Total:</span>
+        <span className="font-bold text-black" >R$ {total.toFixed(2)}</span>
       </div>
 
       
