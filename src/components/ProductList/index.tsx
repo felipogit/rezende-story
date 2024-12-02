@@ -25,8 +25,7 @@ export function ProductList({ addItemToCart, products }: ProductListProps) {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4">
-      <h2 className="text-2xl font-bold mb-4">Produtos</h2>
+    <div className="container mx-auto px-4 py-4">  
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
         {products.map((product) => {
           const showFullDescription = descriptionVisibility[String(product.id)] || false;
@@ -35,7 +34,11 @@ export function ProductList({ addItemToCart, products }: ProductListProps) {
 
           return (
             <div key={product.id} className="border p-4 rounded-lg">
+              
               <Image
+                width={100}
+                height={40}
+                priority
                 src={product.imageUrl}
                 alt={product.name}
                 className="w-full h-40 object-cover mb-2"

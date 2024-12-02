@@ -20,7 +20,7 @@ interface HeaderProps {
   total: number;
   cartOpen: boolean;
   categories: Category[]; // Passar as categorias
-  setSelectedCategory: (category: string) => void; // Função para selecionar a categoria
+  setSelectedCategory: (categoryId: number | null) => void; // Função para selecionar a categoria
 }
 
 export default function Header({
@@ -36,21 +36,19 @@ export default function Header({
   const [menuOpen, setMenuOpen] = useState(false);
   const [itemCount, setItemCount] = useState(0); // Contagem de itens no carrinho
 
-  // Atualiza a contagem de itens no carrinho sempre que o carrinho muda
   useEffect(() => {
     const count = cartItems.reduce((acc, item) => acc + item.quantity, 0);
-    setItemCount(count); // Atualiza a contagem de itens
+    setItemCount(count);
   }, [cartItems]);
 
-  const handleCategorySelect = (categoryName: string) => {
-    setSelectedCategory(categoryName);  // Seleciona a categoria
-    setMenuOpen(false);  // Fecha o menu após a seleção
+  const handleCategorySelect = (categoryId: number | null) => {
+    setSelectedCategory(categoryId); // Seleciona a categoria pelo ID
+    setMenuOpen(false); // Fecha o menu após a seleção
   };
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 py-2 flex items-center justify-between">
-        {/* Botão de Menu (Mobile) */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden text-gray-600 hover:text-blue-500"
@@ -59,7 +57,6 @@ export default function Header({
           <FaBars size={24} />
         </button>
 
-        {/* Logo */}
         <div className="text-xl font-bold text-gray-800 flex-1 text-center md:text-left">
           <Image
             src="/logo.jpg"
@@ -70,9 +67,7 @@ export default function Header({
           />
         </div>
 
-        {/* Ícones e Carrinho */}
         <div className="flex items-center space-x-4">
-          {/* Carrinho e Contador */}
           <div className="flex items-center space-x-2">
             <button
               onClick={toggleCart}
@@ -81,7 +76,6 @@ export default function Header({
             >
               <FaShoppingCart size={20} />
             </button>
-            {/* Contagem de itens no carrinho */}
             {itemCount > 0 && (
               <span className="bg-red-500 text-white text-xs rounded-full px-2 py-1">
                 {itemCount}
@@ -91,18 +85,25 @@ export default function Header({
         </div>
       </div>
 
-      {/* Menu de Categorias (Mobile e Desktop) */}
       <nav
         className={`${
           menuOpen ? "block" : "hidden"
-        } absolute  left-0 w-full bg-white shadow-md p-4 md:p-2 md:static md:flex md:space-x-4 md:justify-center`}
+        } absolute left-0 w-full bg-white shadow-md p-4 md:p-2 md:static md:flex md:space-x-4 md:justify-center`}
       >
         <ul className="flex flex-col md:flex-row md:space-x-4 md:justify-center space-y-2 md:space-y-0">
+          <li>
+            <button
+              onClick={() => handleCategorySelect(null)}
+              className="text-gray-700 hover:text-blue-500 py-2 px-4 rounded-md"
+            >
+              Todos
+            </button>
+          </li>
           {categories.map((category) => (
             <li key={category.id}>
               <button
-                onClick={() => handleCategorySelect(category.name)}  // Fecha o menu e seleciona a categoria
-                className="text-gray-700 hover:text-blue-500 py-2 px-4 rounded-md transition-all duration-300 ease-in-out transform hover:scale-105"
+                onClick={() => handleCategorySelect(category.id)}
+                className="text-gray-700 hover:text-blue-500 py-2 px-4 rounded-md"
               >
                 {category.name}
               </button>
@@ -111,7 +112,6 @@ export default function Header({
         </ul>
       </nav>
 
-      {/* Exibir Carrinho */}
       {cartOpen && (
         <Cart
           items={cartItems}

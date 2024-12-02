@@ -1,27 +1,29 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Product } from "@/components/Products";
+import { categories, Product } from "@/components/Products";
 import { ProductList } from "@/components/ProductList";
 import Header from "@/components/Header";
 import { Banner } from "@/components/Banner";
-import { categories } from "@/components/Products";
 
 export default function Home() {
   const [cartItems, setCartItems] = useState<Product[]>([]);
   const [cartOpen, setCartOpen] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<string>(""); // Estado para categoria selecionada
-  const [filteredProducts, setFilteredProducts] = useState<Product[]>([]); // Produtos filtrados
+  const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
+  const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
 
   useEffect(() => {
-    if (selectedCategory === "") {
-      // Se não houver categoria selecionada, exibe todos os produtos
+    // Filtra os produtos de acordo com a categoria selecionada
+    if (selectedCategory === null) {
+      // Se nenhuma categoria foi selecionada, mostramos todos os produtos
       setFilteredProducts(categories.flatMap((category) => category.products));
     } else {
-      // Filtra produtos pela categoria selecionada
-      const category = categories.find((cat) => cat.name === selectedCategory);
+      // Filtra os produtos pela categoria selecionada
+      const category = categories.find((cat) => cat.id === selectedCategory);
       if (category) {
         setFilteredProducts(category.products);
+      } else {
+        setFilteredProducts([]); // Se a categoria não for encontrada
       }
     }
   }, [selectedCategory]);
@@ -51,6 +53,12 @@ export default function Home() {
 
   const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
+  // Função para obter o nome da categoria selecionada
+  const getCategoryName = (categoryId: number | null): string => {
+    const category = categories.find((cat) => cat.id === categoryId);
+    return category ? category.name : "Todas as Categorias"; // Nome da categoria ou "Todas as Categorias" caso não tenha uma categoria selecionada
+  };
+
   return (
     <div>
       <Header
@@ -61,10 +69,17 @@ export default function Home() {
         total={total}
         cartOpen={cartOpen}
         categories={categories}
-        setSelectedCategory={setSelectedCategory} // Passa a função para o Header
+        setSelectedCategory={setSelectedCategory}
       />
       <Banner />
-      <ProductList addItemToCart={addItemToCart} products={filteredProducts} /> {/* Passa os produtos filtrados */}
+      
+      {/* Exibindo o nome da categoria selecionada */}
+      <h3 className="text-2xl font-bold mb-4 m-5">
+         {getCategoryName(selectedCategory)} {/* Exibe o nome da categoria */}
+      </h3>
+
+      {/* Passando os produtos filtrados para o ProductList */}
+      <ProductList addItemToCart={addItemToCart} products={filteredProducts} />
     </div>
   );
 }

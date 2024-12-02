@@ -18,6 +18,27 @@ interface CartProps {
 }
 
 export const Cart: React.FC<CartProps> = ({ items, total, closeCart, removeItem, changeQuantity }) => {
+  
+  const generateWhatsAppMessage = () => {
+    const productDetails = items
+      .map(
+        (item) =>
+          `${item.name} (Qtd: ${item.quantity}) - R$ ${item.price.toFixed(
+            2
+          )}\nDescrição: Produto ${item.name}`
+      )
+      .join("\n\n");
+
+    return `Olá, gostaria de comprar os seguintes itens:\n\n${productDetails}\n\nTotal: R$ ${total.toFixed(
+      2
+    )}\n\nPor favor, me envie a confirmação.`;
+  };
+
+  const whatsappMessage = generateWhatsAppMessage();
+
+  // Link para abrir o WhatsApp com a mensagem formatada
+  const whatsappLink = `https://wa.me/5598981963708?text=${encodeURIComponent(whatsappMessage)}`;
+
   return (
     <div className="absolute top-14 right-0 w-80 bg-white shadow-md p-4 border rounded-lg">
       <h3 className="text-xl font-bold mb-4">Carrinho de Compras</h3>
@@ -76,10 +97,15 @@ export const Cart: React.FC<CartProps> = ({ items, total, closeCart, removeItem,
         <span>R$ {total.toFixed(2)}</span>
       </div>
 
-      {/* Botão para finalizar compra */}
-      <button className="w-full bg-blue-500 text-white py-2 mt-4 rounded" onClick={closeCart}>
-        Finalizar Compra
-      </button>
+      
+      
+
+      {/* Botão para enviar para o WhatsApp */}
+      <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+        <button className="w-full bg-green-500 text-white py-2 mt-4 rounded">
+          Enviar Carrinho para o WhatsApp
+        </button>
+      </a>
 
       {/* Botão para fechar o carrinho */}
       <button
@@ -92,5 +118,3 @@ export const Cart: React.FC<CartProps> = ({ items, total, closeCart, removeItem,
     </div>
   );
 };
-
-
