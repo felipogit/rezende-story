@@ -47,7 +47,7 @@ export function ProductList({ addItemToCart, products }: ProductListProps) {
                 {showFullDescription ? fullDescription : shortDescription}{" "}
                 <span
                   className="text-blue-500 cursor-pointer"
-                  onClick={() => toggleDescription(product.id)} // Usando product.id
+                  onClick={() => toggleDescription(product.id)} 
                 >
                   {showFullDescription ? "Mostrar menos" : "Mostrar mais"}
                 </span>

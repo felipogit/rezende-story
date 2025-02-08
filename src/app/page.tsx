@@ -74,7 +74,7 @@ export default function Home() {
       <Banner />
       
       {/* Exibindo o nome da categoria selecionada */}
-      <h3 className="text-2xl text-black font-bold mb-4 m-5">
+      <h3 className="text-2xl text-black font-bold mb-4 m-5 container mx-auto px-4 py-4">
          {getCategoryName(selectedCategory)} {/* Exibe o nome da categoria */}
       </h3>
 
