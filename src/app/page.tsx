@@ -6,6 +6,7 @@ import { ProductList } from "@/components/ProductList";
 import Header from "@/components/Header";
 import { Banner } from "@/components/Banner";
 
+
 export default function Home() {
   const [cartItems, setCartItems] = useState<Product[]>([]);
   const [cartOpen, setCartOpen] = useState(false);
@@ -80,6 +81,7 @@ export default function Home() {
 
       {/* Passando os produtos filtrados para o ProductList */}
       <ProductList addItemToCart={addItemToCart} products={filteredProducts} />
+      
     </div>
   );
 }

@@ -1,67 +1,87 @@
 "use client";
 
 import { useState } from "react";
-import { Product } from "../Products";
+import { Product } from "@/components/Products";
+import ProductModal from "@/components/ProductModal";
+import AddToCartModal from "../ProductModal/AddToCartModal";
 
 
 interface ProductListProps {
   addItemToCart: (product: Product) => void;
-  products: Product[]; // Recebe a lista de produtos
+  products: Product[];
 }
 
 export function ProductList({ addItemToCart, products }: ProductListProps) {
-  // Certificando-se de que a chave de descriptionVisibility seja do tipo string
-  const [descriptionVisibility, setDescriptionVisibility] = useState<Record<string, boolean>>({});
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isAddToCartModalOpen, setIsAddToCartModalOpen] = useState(false); // Estado para controlar o modal de confirmação
+  const [addedProductName, setAddedProductName] = useState<string>(""); // Nome do produto adicionado
 
-  const toggleDescription = (productId: number) => {
-    // Convertendo o id do produto para string ao usá-lo como chave
-    const productIdStr = String(productId);
+  const openModal = (product: Product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
 
-    // Inverte o estado de mostrar/ocultar descrição para o produto específico
-    setDescriptionVisibility((prevState) => ({
-      ...prevState,
-      [productIdStr]: !prevState[productIdStr], // Usando a chave como string
-    }));
+  const closeModal = () => {
+    setSelectedProduct(null);
+    setIsModalOpen(false);
+  };
+
+  const handleAddToCart = (product: Product) => {
+    addItemToCart(product); // Adiciona o produto ao carrinho
+    setAddedProductName(product.name); // Atualiza o nome do produto adicionado
+    setIsModalOpen(false); // Fecha o modal de produto
+    setIsAddToCartModalOpen(true); // Abre o modal de confirmação
+
+    // Fecha o modal de confirmação após 2 segundos
+    setTimeout(() => {
+      setIsAddToCartModalOpen(false); // Fecha o modal de confirmação
+    }, 2000);
   };
 
   return (
-    <div className="container mx-auto px-4 py-4">  
+    <div className="container mx-auto px-4 py-4">
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-        {products.map((product) => {
-          const showFullDescription = descriptionVisibility[String(product.id)] || false;
-          const shortDescription = product.description.slice(0, 100); // Exibe os primeiros 100 caracteres
-          const fullDescription = product.description;
+        {products.map((product) => (
+          <div 
+            key={product.id} 
+            className="border p-4 rounded-lg shadow-md hover:shadow-lg transition bg-white flex flex-col"
+          >
+            <img
+              src={product.imageUrl}
+              alt={product.name}
+              className="w-full h-40 object-cover mb-2 rounded-lg cursor-pointer"
+              onClick={() => openModal(product)} // Abre o modal do produto
+            />
+            <h3 className="text-lg font-semibold text-gray-900">{product.name}</h3>
+            <p className="text-gray-500 font-medium">R$ {product.price.toFixed(2)}</p>
+            <p className="text-gray-600 text-sm mt-1 flex-grow">
+              {product.description.slice(0, 60)}...
+              <span className="text-blue-500 cursor-pointer" onClick={() => openModal(product)}> Ver mais</span>
+            </p>
 
-          return (
-            <div key={product.id} className="border p-4 rounded-lg ">
-              
-              <img
-                
-                src={product.imageUrl}
-                alt={product.name}
-                className="w-full h-40 object-cover mb-2"
-              />
-              <h3 className="text-lg font-semibold text-black">{product.name}</h3>
-              <p className="text-gray-500">R$ {product.price.toFixed(2)}</p>
-              <p className="text-gray-600 mt-2">
-                {showFullDescription ? fullDescription : shortDescription}{" "}
-                <span
-                  className="text-blue-500 cursor-pointer"
-                  onClick={() => toggleDescription(product.id)} 
-                >
-                  {showFullDescription ? "Mostrar menos" : "Mostrar mais"}
-                </span>
-              </p>
+            {/* Container do botão para alinhar sempre no final */}
+            <div className="mt-auto">
               <button
-                onClick={() => addItemToCart(product)}
-                className="mt-2 bg-blue-500 text-white px-4 py-2 rounded"
+                onClick={() => handleAddToCart(product)} // Chama a função para adicionar ao carrinho
+                className="mt-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg w-full transition text-sm sm:text-base"
               >
-                Adicionar ao Carrinho
+                🛒 Adicionar
               </button>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
+
+      {/* Modal do Produto */}
+      <ProductModal product={selectedProduct} isOpen={isModalOpen} onClose={closeModal} addItemToCart={handleAddToCart} />
+
+      {/* Modal de confirmação de produto adicionado */}
+      <AddToCartModal
+        isOpen={isAddToCartModalOpen}
+        onClose={() => setIsAddToCartModalOpen(false)} // Fecha o modal de confirmação
+        productName={addedProductName} // Passa o nome do produto adicionado
+      />
     </div>
   );
 }
